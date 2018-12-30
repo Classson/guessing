@@ -1,22 +1,146 @@
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
-  /* background-image: url("https://images.unsplash.com/photo-1506555191898-a76bacf004ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"); */
   background-image: url("https://images.unsplash.com/photo-1532604146921-0e8bd9ab0891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 40px;
+  padding: 0px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 #box {
-  background-color: rgba(232, 234, 237, 0.8);
-  border: solid black 3px;
+  background-color: rgba(232, 234, 237, 0.9);
+  border: solid #3d3d3d 3px;
+  height: 85vh;
+  min-height: 350px;
   width: 70vw;
-  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  color: #3d3d3d;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+h3 {
+  padding: 0px 10px 0px 10px;
+  margin: 10px;
+}
+
+#message {
+  padding: 10px;
+  margin: 8px;
+}
+
+#guesses {
+  display: flex;
+  justify-content: center;
+}
+
+.used-guess {
+  height: 40px;
+  padding: 20px;
+  color: #0C2180;
+  font-size: 1.7em;
+}
+
+#buttons {
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+button {
+  height: 40px;
+  width: 15vw;
+  max-width: 90px;
+  margin: 8px;
+  background-color: #E1A38F;
+  color:#3d3d3d;
+  border: solid #3d3d3d 1.5px;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: rgb(230, 112, 73);
+  color:#222222;
+}
+
+input {
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+  border: solid #3d3d3d 1.5px;
+  font-size: 1.5em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#footer {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #3d3d3d;
+  font-size: .8em;
+  margin: 0px 30px 10px 30px;
+}
+
+a:visited {
+  color: #222222;
+}
+
+@media (max-width: 550px) {
+  #box {
+    background-color: rgba(232, 234, 237, 0.8);
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    max-height: 100%;
+    border-radius: 0px;
+    border: none;
+  }
+  body{
+    margin: 0px;
+  }
+  button{
+    font-size: .7em;
+  }
+  #footer {
+    width: 100vw;
+  }
+  .used-guess {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+  #message {
+    font-size: 1.2em;
+  }
 }
 
 
